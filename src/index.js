@@ -1,13 +1,13 @@
-import 'dotenv/config';
+import "dotenv/config";
+import express from "express";
+import cors from "cors";
 
-const userCredentials = { firstname: 'Robin' };
-const userDetails = { nationality: 'German' };
+const app = express();
+app.use(cors());
 
-const user = {
-  ...userCredentials,
-  ...userDetails,
-};
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-console.log(user);
-
-console.log(process.env.SOME_ENV_VARIABLE);
+app.listen(9000, () =>
+  console.log(`Express Todo Api app listening on port 9000`)
+);

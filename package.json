@@ -1,7 +1,7 @@
 {
-  "name": "node-babel-server",
+  "name": "express-api-quickstart",
   "version": "1.0.0",
-  "description": "",
+  "description": "Quickstart template for your Express API project.",
   "main": "index.js",
   "scripts": {
     "start": "nodemon --exec babel-node src/index.js",
@@ -17,6 +17,8 @@
     "nodemon": "^1.18.9"
   },
   "dependencies": {
-    "dotenv": "^8.2.0"
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
   }
 }
